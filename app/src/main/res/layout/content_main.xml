@@ -10,21 +10,69 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <EditText
-        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorLabels"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_controls"
+        android:text="@string/temperatura"
+        android:textSize="@dimen/tamanho_texto_labels"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextoLabels" />
+
+    <EditText
+        android:id="@+id/editTextTemperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorInputs"
         android:ems="10"
-        android:inputType="numberSigned" />
+        android:hint="@string/temperatura"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:padding="@dimen/padding_controls"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginTop="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorLabels"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_controls"
+        android:text="@string/unidade"
+        android:textSize="@dimen/tamanho_texto_labels"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextoLabels"  />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_controlos"
+        android:layout_marginRight="@dimen/margem_controlos"
+        android:background="@color/colorInputs">
+
+        <RadioButton
+            android:id="@+id/radioButtonFarhenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorInputs"
+            android:text="@string/fahrenheit"
+            android:textColorLink="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCelsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/celsius"
+            android:textColorLink="@android:color/black" />
+    </RadioGroup>
 
 </LinearLayout>

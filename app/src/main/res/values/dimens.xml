@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="padding_controls">7dp</dimen>
+    <dimen name="espaco_entre_campos">28dp</dimen>
+    <dimen name="margem_controlos">16dp</dimen>
+    <dimen name="tamanho_texto_labels">14sp</dimen>
 </resources>
