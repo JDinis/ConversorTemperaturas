@@ -5,5 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorLabels">@android:color/holo_green_dark</color>
     <color name="colorTextoLabels">@android:color/white</color>
-    <color name="colorInputs">#d81b60</color>
+    <color name="colorInputs">@android:color/holo_orange_dark</color>
 </resources>
