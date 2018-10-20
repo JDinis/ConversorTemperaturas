@@ -21,6 +21,7 @@ public class TemperaturaFahrenheit extends Temperatura {
      */
     @Override
     public double getCelsius() {
+        //Convem colocar .0 para converter automaticamente para double (ou float)
         return (valor - 32.0) / (9.0 / 5.0);
     }
 }
