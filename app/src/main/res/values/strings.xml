@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">Conversor de Temperaturas</string>
+    <string name="app_name">Temperature Converter</string>
     <string name="action_settings">Settings</string>
-    <string name="temperatura">Temperatura</string>
-    <string name="unidade">Unidade</string>
-    <string name="fahrenheit">Fahrenheit</string>
-    <string name="celsius">Celsius</string>
-    <string name="title_activity_mostra_temperaturas">Temperatura</string>
+    <string name="temperatura">Temperature</string>
+    <string name="unidade">Unit</string>
+    <string name="fahrenheit" translatable="false">Fahrenheit</string>
+    <string name="celsius" translatable="false">Celsius</string>
+    <string name="title_activity_mostra_temperaturas">Temperature</string>
+    <string name="Insira_Temperatura">Please insert a temperature!</string>
+    <string name="Erro_Temperatura">Invalid Temperature Value!</string>
 </resources>

@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                mostraTemperaturas();
             }
         });
     }
@@ -51,8 +52,32 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void mostraTemperaturas(View view) {
+    public void mostraTemperaturas() {
         Intent intent = new Intent(this, MostraTemperaturasActivity.class);
+        EditText editTextTemperatura = (EditText) findViewById(R.id.editTextTemperatura);
+        RadioButton radioButtonFarhenheit = (RadioButton)findViewById(R.id.radioButtonFarhenheit);
+
+        if(editTextTemperatura.getText().toString().isEmpty()){
+            editTextTemperatura.setError(getString(R.string.Insira_Temperatura));
+            editTextTemperatura.requestFocus();
+            return;
+        }
+
+        double valorTemperatura = 0;
+        try {
+            valorTemperatura = Double.parseDouble(editTextTemperatura.getText().toString());
+        } catch (NumberFormatException e) {
+            editTextTemperatura.setError(getString(R.string.Erro_Temperatura));
+            editTextTemperatura.requestFocus();
+            return;
+        }
+
+        if(radioButtonFarhenheit.isChecked()){
+            AppData.temperatura = new TemperaturaFahrenheit(valorTemperatura);
+        }else{
+            AppData.temperatura = new TemperaturaCelsius(valorTemperatura);
+        }
+
         startActivity(intent);
     }
 }
